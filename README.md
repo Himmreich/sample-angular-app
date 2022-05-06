@@ -25,3 +25,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Docker build image
+
+Run `docker build --build-arg HTTP_PROXY=http://user:pwd@host:port --build-arg HTTPS_PROXY=http://user:pwd@host:port -t test/angular-app .`
+
+## Docker run container
+
+Run `docker run -d -it -p 8080:80 /tcp --name angular-app test/angular-app:latest`
